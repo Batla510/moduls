@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+ <div class="container">
+     <div class="box">
+         <div class="text">
+             <h1 class="title">Регистрация</h1>
+             <p class="subtitle">Войдите в учётную запись</p>
+         </div>
+         <form action="" method="post">
+             {% csrf_token %}
+             {% for field in form%}
+                    <p>{{ field.label_tag }}</p>
+            {{ field }}
+            {% endfor %}
+             <button class="btn">Зарегистрироваться</button>
+         </form>
+
+         <a class="subbtn">Вернуться к странице входа</a>
+     </div>
+ </div>
+</body>
+</html>

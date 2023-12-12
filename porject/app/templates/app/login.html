@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+</head>
+<body>
+ <div class="container">
+     <div class="box">
+         <div class="text">
+             <h1 class="title">Вход</h1>
+             <p class="subtitle">Войдите в учётную запись</p>
+         </div>
+         <form action="" method="post">
+             {% csrf_token %}
+             <p>{{ form.email.label_tag}}</p>
+             {{ form.email }}
+             <p>{{ form.password.label_tag}}</p>
+             {{ form.password }}
+             <button class="btn">Войти</button>
+         </form>
+
+         <div class="info">
+             <p class="subtext">_____Ещё не зарегестрированы?_____</p>
+         </div>
+         <button class="btn">Регистрация</button>
+     </div>
+ </div>
+</body>
+</html>
